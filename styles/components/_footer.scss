@@ -1,0 +1,133 @@
+footer {
+  padding-bottom: 20px;
+  background-color: #1e1e26;
+  @include media('desktop-s') {
+    padding: 60px 120px;
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  .footer__form {
+    display: flex;
+    justify-content: center;
+    height: 145px;
+    padding: 50px 0;
+    position: relative;
+    @include media('desktop-s') {
+      justify-content: flex-start;
+      height: 45px;
+      padding: 0;
+    }
+    input {
+      width: 60%;
+      border: none;
+      margin-right: 10px;
+      padding-left: 20px;
+      border-radius: 50px;
+      font-family: $Fuente1;
+      @include media('desktop-s') {
+        min-width: 80%;
+      }
+    }
+    input:focus {
+      outline: none;
+      border: 1px solid $Bright-red;
+      color: $Bright-red;
+    }
+    button {
+      margin: 0;
+      height: 100%;
+      width: auto;
+      padding: 0 30px;
+      box-shadow: initial;
+    }
+    .footer__form-p {
+      display: none;
+    }
+    .error-message {
+      display: none;
+      @include media('desktop-s') {
+        display: initial;
+        position: absolute;
+        bottom: -30px;
+        left: -25px;
+        color: $Bright-red;
+        font-style: italic;
+        font-size: 1.2rem;
+      }
+    }
+  }
+  input::placeholder {
+    font-family: 'Be Vietnam', sans-serif;
+  }
+  .footer__info-list {
+    height: 170px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    font-size: 1.4rem;
+    font-weight: 400;
+    color: #ffefebba;
+    @include media('desktop-s') {
+      grid-column: 2 / span 1;
+      grid-row: 1 / span 2;
+      padding-left: 25px;
+    }
+    li {
+      margin: 7px auto;
+      width: 95px;
+      cursor: pointer;
+      @include media('desktop-s') {
+        margin: 0 auto 14px;
+      }
+    }
+    li:hover {
+      color: $Bright-red;
+    }
+  }
+  .footer__social-list {
+    display: flex;
+    font-size: 3rem;
+    justify-content: space-evenly;
+    color: white;
+    @include media('desktop-s') {
+      justify-content: initial;
+    }
+    li {
+      @include media('desktop-s') {
+        margin: 0 5px;
+        font-size: 2.3rem
+      }
+    }
+    li:hover {
+      cursor: pointer;
+      color: $Bright-red;
+    }
+  }
+  .footer__logo {
+    padding: 40px 0;
+    img {
+      display: block;
+      margin: 0 auto;
+      @include media('desktop-s'){
+        margin: 0;
+      }
+    }
+    @include media('desktop-s'){
+      grid-row: 1 / span 1;
+      padding: 0;
+    }
+  }
+  p {
+    @include media('desktop-s'){
+      text-align: left;
+      padding-left: 45px;
+    }
+  }
+}
+
+
+
+
+
+

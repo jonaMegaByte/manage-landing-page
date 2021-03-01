@@ -1,0 +1,85 @@
+.say {
+  @include media('desktop-s') {
+    margin-bottom: 60px;
+  }
+  .say__title{
+    margin-bottom: 40px;
+  }
+  .say__cards {
+    margin-bottom: 50px;
+    display: flex;
+    overflow-x: scroll;
+    padding-bottom: 15px;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    @include media('desktop-s') {
+      padding-top: 40px;
+    }
+    .say__card-container {
+      z-index: 2;
+      width: 100%;
+      flex-shrink: 0;
+      scroll-snap-align: center;
+      @include media('desktop-s') {
+        width: 25%;
+        margin: 0 15px;
+        padding-bottom: 25px;
+        background-color: #fafafa;
+      }
+      .say__card-photo-container {
+        height: 70px;
+        width: 70px;
+        margin: 0 auto 20px;
+        @include media('desktop-s') {
+          margin-top: -40px;
+        }
+        .say__card-photo {
+          height: inherit;
+          width: inherit;
+        }
+      }
+      .say__card-name {
+        margin-bottom: 20px;
+        color: #242d52;
+        font-weight: 700;
+        font-size: 1.6rem;
+      }
+      .say__card-description {
+        padding: 0px 40px;
+        @include media('desktop-s') {
+          @include line-height(1.5rem);
+        }
+      }
+    }
+  }
+  .say__cards::-webkit-scrollbar {// Elemento que envolvente del scroll
+    -webkit-appearance: none;
+    background-color: #5e5e5e1e;
+  }
+
+  .say__cards::-webkit-scrollbar-button:increment,.say__cards::-webkit-scrollbar-button {// Estilos a los botones de los extremos
+      display: none;
+  } 
+
+  .say__cards::-webkit-scrollbar:horizontal {// Estilos solo a la barra horizontal
+      height: 10px;
+  }
+
+  .say__cards::-webkit-scrollbar-thumb {// Estilos a la barra principal del scroll
+      background-color: #7979794b;
+      border-radius: 20px;
+      border: 2px solid #f1f2f3;
+  }
+
+  .say__cards::-webkit-scrollbar-thumb:active {// Estilos a la barra principal del scroll
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid #f1f2f3;
+  }
+  
+
+  .say__cards::-webkit-scrollbar-track { //Estilos al carril completo por donde puede pasar la barra principal
+      border-radius: 10px;
+  }
+}
+

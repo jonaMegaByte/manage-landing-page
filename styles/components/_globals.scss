@@ -1,0 +1,98 @@
+$Bright-red: hsl(12, 88%, 59%);
+$Dark-blue: hsl(228, 39%, 23%);
+$Dark-grayish-blue: hsl(227, 12%, 61%);
+$Very-dark-blue: hsl(233, 12%, 13%);
+$Very-pale-red: hsl(13, 100%, 96%);
+$Vary-light-gray: #f89074;
+$Fuente1: 'Be Vietnam', sans-serif;
+
+@mixin line-height($font-size) {
+    font-size: $font-size;
+    line-height: calc(#{$font-size} * 2);
+}
+
+@mixin media ($breakpoint) {
+  @if $breakpoint == tablet-s {  
+    @media only screen and (min-width: 480px) { @content; }  
+  } @else if $breakpoint == desktop-s {  
+    @media only screen and (min-width: 992px) { @content; }  
+  }
+} 
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: $Fuente1;
+}
+
+body {
+  position: relative;
+  background-image: url('../images/bg-tablet-pattern.svg');
+  background-repeat: no-repeat;
+  background-size: 95%;
+  background-position: 1300% 500px;
+  @include media('desktop-s') {
+    background: none;
+  }
+  .body__decoration {
+    background-image: url('../images/bg-tablet-pattern.svg');
+    background-repeat: no-repeat;
+    @include media('desktop-s') {
+      z-index: 1;
+      position: absolute;
+      background-size: 100%;
+      width: 900px;
+      height: 505px;
+      top: 43%;
+      left: -620px;
+    }
+  }
+}
+
+p {
+  text-align: center;
+  font-weight: 400;
+  padding: 0 20px;
+  color: $Dark-grayish-blue;
+  @include line-height(1.4rem);
+}
+
+button {
+  width: 125px;
+  height: 45px;
+  border-radius: 50px;
+  border: none;
+  margin: 20px auto;
+  display: block;
+  background-color: $Bright-red;
+  color: $Very-pale-red;
+  font-family: $Fuente1;
+  box-shadow: 2px 1px 10px $Bright-red;
+  cursor: pointer;
+}
+
+button:focus {
+  outline: none;
+}
+
+button:hover {
+  background-color: $Vary-light-gray;
+  box-shadow: 2px 1px 10px $Vary-light-gray;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  padding: 20px;
+  color: $Dark-blue;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+}
