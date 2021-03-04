@@ -8,6 +8,6 @@ Es una landing page en la cual se usaron las siguientes tecnologías:
 
 En el caso del JS se usó un pequeño archivo para activar y desactivar un menú, así como para activar un mensaje en caso de que el valor del input no tenga un "@".
 
-El proyecto se consiguió en frontendmentor.io.
+El proyecto se consiguió en https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5.
 
-El link del proyecto es: https://www.frontendmentor.io/challenges/manage-landing-page-SLXqC6P5
+El link del proyecto es: https://jonathangg03.github.io/manage-landing-page/
